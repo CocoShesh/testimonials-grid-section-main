@@ -1,18 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600&display=swap");
+:root {
+  --primary-color: hsl(0, 0%, 81%);
+  --secondary-color: hsl(0, 0%, 100%);
+  --tertiary-color: hsl(210, 46%, 95%);
+  --quaternary-color: hsl(0, 0%, 81%);
+  --background-color: hsl(219, 29%, 14%);
+  --accent-color: hsl(263, 55%, 52%);
+  --sidebar-color: gray;
+}
+
 body {
   align-items: center;
   justify-content: center;
-
   margin-top: 40px;
   margin-left: 40px;
-  background-color: hsl(0, 0%, 81%);
+  background-color: var(--primary-color);
 }
 .main {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns:1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
   gap: 20px;
-  padding: 0px;
   height: 50vh;
   width: 700px;
 }
@@ -27,7 +35,7 @@ body {
   background-image: url("images/bg-pattern-quotation.svg");
   background-repeat: no-repeat;
   background-position-x: 75%;
-  background-color: hsl(263, 55%, 52%);
+  background-color: var(--accent-color);
   padding-right: 20px;
   border: 1px solid transparent;
 }
@@ -38,7 +46,7 @@ body {
   grid-row: 1;
   width: 300px;
   padding: 10px;
-  margin-left: 45%;
+  margin-left: 47%;
   height: 300px;
   border-radius: 10px;
   background-color: hsl(217, 19%, 35%);
@@ -48,12 +56,12 @@ body {
   border: 1px solid black;
   grid-column: 3;
   grid-row: 1 / span 2;
-  background-color: gray;
+  background-color: var(--sidebar-color);
   padding: 10px;
   width: 250px;
   border-radius: 10px;
-  margin-left: 5px;
-  background-color: hsl(0, 0%, 100%);
+  margin-left: 10px;
+  background-color: var(--secondary-color);
   border: 1px solid transparent;
 }
 .fourth {
@@ -65,7 +73,7 @@ body {
   height: 320px;
   margin-right: 15px;
   border-radius: 10px;
-  background-color: hsl(0, 0%, 100%);
+  background-color: var(--secondary-color);
   border: 1px solid transparent;
 }
 .fifth {
@@ -77,10 +85,34 @@ body {
   border-radius: 10px;
   padding-left: 20px;
   padding-top: 10px;
-  background-color: hsl(219, 29%, 14%);
+  background-color: var(--background-color);
   border: 1px solid transparent;
 }
 
+.images {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 0;
+  padding: 15px 10px 0px 20px;
+}
+
+.text-container {
+  display: grid;
+  grid-template-rows: auto auto;
+  align-content: center;
+}
+
+.name,
+.status {
+  padding-left: 20px;
+  margin: 0;
+}
+.name {
+  color: var(--quaternary-color);
+}
+.status {
+  color: var(--primary-color);
+}
 img {
   width: 50px;
   border-radius: 50px;
@@ -106,13 +138,14 @@ img {
 .sentences {
   text-align: justify;
   margin-right: 25px;
-  color: hsl(0, 0%, 81%);
+  color: var(--primary-color);
 }
 .sentences2 {
   text-align: left;
   margin-right: 40px;
   font-size: 16px;
-  color: hsl(0, 0%, 81%);
+  color: var(--primary-color);
+}
 }
 .achivement3 {
   color: black;
@@ -166,30 +199,4 @@ p {
   margin-left: 20px;
   font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 14px;
-}
-
-.images {
-  display: grid;
-  grid-template-columns: auto 1fr; /* Adjust the column widths as needed */
-  grid-gap: 0;
-  padding: 15px 10px 0px 20px;
-  /* No gap between the grid items */
-}
-
-.text-container {
-  display: grid;
-  grid-template-rows: auto auto; /* Adjust the row heights as needed */
-  align-content: center; /* Vertically center the content within the container */
-}
-
-.name,
-.status {
-  padding-left: 20px;
-  margin: 0; /* Remove default margin */
-}
-.name {
-  color: hsl(210, 46%, 95%);
-}
-.status {
-  color: hsl(0, 0%, 81%);
 }
