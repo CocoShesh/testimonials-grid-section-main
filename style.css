@@ -13,14 +13,14 @@
 }
 body {
   margin: 0;
-  height: 100vh;
+
   background: var(--Light-grayish-blue);
 }
 main {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1.2fr 1.2fr;
   grid-template-rows: auto auto;
-
+  height: 100%;
   margin: 2rem;
   grid-template-areas:
     "daniel daniel jonathan kira"
