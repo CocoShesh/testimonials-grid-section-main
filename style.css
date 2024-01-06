@@ -18,7 +18,7 @@ main {
   display: grid;
   grid-template-columns: 1.2fr 1fr 1.2fr 1.2fr;
   grid-template-rows: auto auto;
-  height: 100%;
+  height: auto;
   margin: 5rem;
   grid-template-areas:
     "daniel daniel jonathan kira"
@@ -113,7 +113,7 @@ h2 {
   font-size: 13px;
   font-family: "Barlow Semi Condensed", sans-serif;
 }
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1200px) {
   main {
     display: grid;
     grid-template-columns: 1fr;
@@ -131,6 +131,8 @@ h2 {
   .kira {
     margin-right: 0;
     margin-bottom: 1rem;
+    width: auto;
+    height: auto;
   }
   .daniel {
     background-position-x: 12rem;
